@@ -530,7 +530,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingKnowledgeGeneration
-
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
@@ -550,7 +549,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMeetingReactions
-
 Set to false to disable Meeting Reactions.
 
 ```yaml
@@ -1489,23 +1487,21 @@ Accept wildcard characters: False
 ```
 
 ### -MeetingKnowledgeExpirationDays
-
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
 This setting controls the number of days meeting knowledge data is retained before it is automatically deleted. The default value is 365 days. -1 indicates that meeting knowledge data will never expire.
 
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
 
-```
-Type
-Parameter Sets
-Aliases
-
-Required
-Position
-Default value
-Accept pipeline input
-Accept wildcard characters
+Required: False
+Position: Named
+Default value: 365
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -NewMeetingRecordingExpirationDays
