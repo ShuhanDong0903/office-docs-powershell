@@ -127,6 +127,8 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-WhoCanRegister <Object>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
+ [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-MeetingKnowledgeExpirationDays <Int32>]
  [<CommonParameters>]
 ```
 
@@ -527,7 +529,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowMeetingKnowledgeGeneration
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting allows admins to control whether an AI-generated meeting knowledge file is created for meetings organized by the user.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowMeetingReactions
+
 Set to false to disable Meeting Reactions.
 
 ```yaml
@@ -1463,6 +1486,26 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -MeetingKnowledgeExpirationDays
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls the number of days meeting knowledge data is retained before it is automatically deleted. The default value is 365 days. -1 indicates that meeting knowledge data will never expire.
+
+
+```
+Type
+Parameter Sets
+Aliases
+
+Required
+Position
+Default value
+Accept pipeline input
+Accept wildcard characters
 ```
 
 ### -NewMeetingRecordingExpirationDays
