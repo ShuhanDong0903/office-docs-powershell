@@ -166,6 +166,10 @@ If a match is found in two or more manipulation rules, the first one is returned
 
 There is a short delay before newly created manipulation rules are added to the evaluation.
 
+If no matching TeamsTranslationRule found, then cmdlet will return error: "No number translation rule matched"
+
+If matching TeamsTranslationRule found, but it produces invalid phonenumber, them cmdlet will return error: "Number translation rule {TeamsTranslationRule.Name} applied to phonenumber produced invalid phonenumber: {resultPhoneNumber}"
+
 ## RELATED LINKS
 [New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstranslationrule)
 
