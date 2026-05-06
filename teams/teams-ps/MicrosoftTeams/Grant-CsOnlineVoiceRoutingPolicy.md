@@ -16,7 +16,7 @@ title: Grant-CsOnlineVoiceRoutingPolicy
 ## SYNOPSIS
 Assigns a per-user online voice routing policy to one user, a group of users, or sets the Global policy instance. Online voice routing policies manage online PSTN usages for Phone System users.
 
-For more details please refer to article [Voice routing policy considerations](/microsoftteams/direct-routing-voice-routing)
+For more details, please refer to the article [Voice routing policy considerations.](/microsoftteams/direct-routing-voice-routing)
 
 ## SYNTAX
 
