@@ -30,8 +30,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedDomainsAsAList <List>] [-ExternalAccessWithTrialTenants <ExternalAccessWithTrialTenantsType>]
  [-SecurityTeamAllowBlockListDelegation <SecurityTeamAllowBlockListDelegationType>]
  [-AllowedTrialTenantDomains <List>]
- [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
- [-ExtendMutualFederationForChatMembership <Boolean>]
+ [-EnableExternalAccessRestrictionsForChatParticipants  <Boolean>]
+ [-EnableMutualFederationForChatParticipants <Boolean>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -41,8 +41,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
  [-BlockedDomains <List>] [-BlockAllSubdomains <Boolean>] [-AllowFederatedUsers <Boolean>]
  [-TreatDiscoveredPartnersAsUnverified <Boolean>] [-SharedSipAddressSpace <Boolean>] [-RestrictTeamsConsumerToExternalUserProfiles <Boolean>]
  [-AllowedDomainsAsAList <List>]
- [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
- [-ExtendMutualFederationForChatMembership <Boolean>]
+ [-EnableExternalAccessRestrictionsForChatParticipants  <Boolean>]
+ [-EnableMutualFederationForChatParticipants <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -464,7 +464,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -ApplyExternalAccessRestrictionsToChatMembership
+### -EnableExternalAccessRestrictionsForChatParticipants 
 
 > Applicable: Microsoft Teams
 
@@ -474,14 +474,14 @@ When set to False (the default value), users in the tenant who have `EnableFeder
 
 When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing active group chats that include external users. 
 
-The `ApplyExternalAccessRestrictionsToChatMembership` parameter does not affect the behavior set by `CommunicationWithExternalOrgs` parameter of the `ExternalAccessPolicy`.
+The `EnableExternalAccessRestrictionsForChatParticipants ` parameter does not affect the behavior set by `CommunicationWithExternalOrgs` parameter of the `ExternalAccessPolicy`.
 > [!NOTE]
 > This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
 
 ```yaml
-Type: ApplyExternalAccessRestrictionsToChatMembership
+Type: EnableExternalAccessRestrictionsForChatParticipants 
 Parameter Sets: (All)
 Aliases:
 
@@ -491,7 +491,7 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -ExtendMutualFederationForChatMembership
+### -EnableMutualFederationForChatParticipants
 
 > Applicable: Microsoft Teams
 
@@ -511,7 +511,7 @@ When set to True, **all participants in the group chat must have mutual federati
 > The user who initiated the chat is never removed from the group chat as a result of this setting.
 
 ```yaml
-Type: ExtendMutualFederationForChatMembership
+Type: EnableMutualFederationForChatParticipants
 Parameter Sets: (All)
 Aliases:
 
