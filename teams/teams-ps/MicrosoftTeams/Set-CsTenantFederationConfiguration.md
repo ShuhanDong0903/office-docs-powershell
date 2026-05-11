@@ -468,7 +468,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> This parameter is reserved for future use and has no effect at this time.
+> This parameter is reserved for future use and has no effect and should not be used. Any values set will not be applied or retained before this parameter is released
 
 When set to False (the default value), users in the tenant who have `EnableFederationAccess` set to False in their assigned `ExternalAccessPolicy` can be added to group chats that include external users only when the chat is initiated by a user in the same tenant who has `EnableFederationAccess` set to True. 
 
@@ -479,6 +479,7 @@ The `EnableExternalAccessRestrictionsForChatParticipants ` parameter does not af
 > This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users. Refer to [Set-CsExternalAccessPolicy](/powershell/module/microsoftteams/set-csexternalaccesspolicy) for information about `EnableFederationAccess` parameter.
 >
 > Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats only when a new message is sent and the chat becomes active
+> 
 
 ```yaml
 Type: EnableExternalAccessRestrictionsForChatParticipants 
@@ -495,7 +496,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> This parameter is reserved for future use and has no effect at this time.
+> This parameter is reserved for future use and has no effect and should not be used. Any values set will not be applied or retained before this parameter is released
 
 This parameter specifies whether additional mutual federation requirements are extended across all participants in a group chat. Mutual federation relationships are determined by each user’s effective external access configuration (`AllowedDomains`, `BlockedDomains`, and `ExternalAccessPolicy`). When enabled, this parameter adds participant‑level mutual federation enforcement to group chat.
 
